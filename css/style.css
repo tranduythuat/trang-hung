@@ -1,0 +1,734 @@
+@font-face {
+    font-family: "1FTVRoashe";
+    src: url("../fonts/1FTVRoashe.woff2") format('woff2'),
+         url("../fonts/1FTVRoashe.woff") format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SVN-GothamLight";
+    src: url("../fonts/SVN-GothamLight.woff2") format('woff2'),
+         url("../fonts/SVN-GothamLight.woff") format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SVN-GothamBold";
+    src: url("../fonts/SVN-GothamBold.woff2") format('woff2'),
+         url("../fonts/SVN-GothamBold.woff") format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "DFVN-CatchyMager-Regular";
+    src: url("../fonts/DFVN-CatchyMager-Regular.woff2") format('woff2'),
+         url("../fonts/DFVN-CatchyMager-Regular.woff") format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+:root{
+    --background-color: #eae8e3ff;
+    --primary-color: black;
+    --secondary-color: #F8F3ED;
+    --font-gotham: 'SVN-Gotham';
+    --font-mtd: 'MTD Doppelganger Display';
+    --font-aston: 'Aston Script';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: normal;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.container {
+    font-family: '1FTVRoashe', sans-serif;
+    max-width: 480px;
+    width: 100%;
+    background-color: var(--background-color);
+    margin: 0 auto;
+    color: var(--primary-color);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 78px 20px 40px 20px;
+    font-size: 11.58px;
+}
+
+.intro-text {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Names Section */
+.names {
+    background-image: url('../images/path12276.png');
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 4% 3%;
+}
+
+.names h1 {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--primary-color);
+    margin: 2% 0;
+    position: relative;
+}
+
+.names h1:first-child {
+    text-align: left;
+}
+
+.names h1:last-child {
+    text-align: right;
+}
+
+.names h1:first-child::after {
+    content: '';
+    position: absolute;
+    right: 3%;
+    top: 58%;
+    display: block;
+    height: 1px;
+    width: 20%;
+    background-color:var(--primary-color);
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .intro-text {
+        font-size: calc((11 / 480) * 100vw);
+        letter-spacing: calc((1.4 / 480) * 100vw);
+    }
+    .names h1 {
+        font-size: calc((70 / 480) * 100vw);
+    }
+}
+
+/* Photo Section */
+.main-photo {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 5%;
+}
+
+.main-photo .img-box {
+    display: flex;
+    /* text-align: right; */
+    justify-content: flex-end;
+    width: 100%;
+    z-index: -100;
+}
+.main-photo .img-box img {
+    width: 282px;
+    height: auto;
+    display: block;
+}
+
+.main-photo .photo-overlay {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    position: absolute;
+    left: 28%;
+    bottom: 2%;
+}
+
+.main-photo .photo-overlay .number {
+    display: flex;
+    max-width: 80px;
+    width: 100%;
+    aspect-ratio: 80 / 70;
+    color: white;
+    z-index: 100;
+}
+
+.main-photo .photo-overlay .number p {
+    font-family: "DFVN-CatchyMager-Regular", sans-serif;
+    font-size: 58px;
+    font-weight: 600;
+    width: 50%;
+    padding: 0 6%;
+}
+
+.main-photo .photo-overlay .number p:first-child {
+    text-align: right;
+    color: var(--primary-color);
+}
+
+.main-photo .text-overlay {
+    position: absolute;
+    transform: rotate(-90deg);
+    color: white;
+    font-weight: 500;
+    font-size: 10px;
+    bottom: 23%;
+    right: -7%;
+}
+
+@media (max-width: 480px) {
+    .main-photo .img-box img {
+        width: calc((280 / 480) * 100vw);
+    }
+
+    .main-photo .photo-overlay .number {
+        width: calc((80 / 480) * 100vw);
+    }
+    
+    .main-photo .photo-overlay .number p {
+        font-size: calc((58 / 480) * 100vw);
+    }
+
+    .main-photo .text-overlay {
+        font-size:  calc((10 / 480) * 100vw);
+    }
+    
+}
+
+
+/* Wedding Info */
+.wedding-info {
+    text-transform: lowercase;
+    text-align: right;
+    padding: 5%;
+}
+
+.wedding-info .date-text {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: var(--primary-color);
+}
+
+/* Save the Date */
+.save-date {
+    text-align: center;
+    padding: 5%; 
+}
+
+.save-date h2 {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    padding-bottom: 3%;
+}
+
+.save-date .img-box {
+    max-width: 432px;
+    width: 100%;
+    aspect-ratio: 432 / 165;
+}
+
+.save-date .img-box img{
+    width: 1px;
+    height: 100%
+}
+
+@media (max-width: 480px) {
+    .wedding-info .date-text {
+        font-size: calc((12 / 480) * 100vw);
+        letter-spacing: calc((1.4 / 480) * 100vw);
+    }
+    
+    .save-date h2 {
+        font-size: calc((38 / 480) * 100vw);
+        letter-spacing: calc((1 / 480) * 100vw);
+    }
+
+    .save-date .img-box {
+        max-width: calc((432 / 480) * 100vw);
+    }
+}
+
+/* Venue Section */
+.venue {
+    text-align: center;
+    padding: 2%;
+}
+
+.venue .venue-description {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 1% 0;
+}
+.venue .venue-description strong {
+    font-family: "SVN-GothamBold", sans-serif;
+}
+
+.venue .venue-name {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 8%;
+}
+
+.venue .venue-address {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding: 2% 5%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.venue .btn-map {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 14px;
+    width: 50%;
+    display: inline-block;      
+    padding: 1% 3%;         
+    background-color: var(--primary-color);
+    color: white;              
+    border: 1px solid var(--primary-color);
+    text-decoration: none;      
+    border-radius: 20px;         
+    font-weight: bold;        
+    transition: background 0.3s;
+}
+
+.venue .btn-map:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.venue .date-box {
+    padding: 5% 0;
+    font-size: 10px;
+}
+
+.venue .date-box .text-date {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.venue .event-date {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    margin-bottom: 7%;
+}
+
+.venue .img-box {
+    max-width: 432px;
+    width: 100%;
+    aspect-ratio: 432 / 165;
+}
+
+.venue .img-box img{
+    width: 1px;
+    height: 100%
+}
+
+@media (max-width: 480px) {
+    .venue .venue-description, .venue .date-box {
+        font-size: calc((10 / 480) * 100vw);
+    }
+
+    .venue .venue-name {
+        font-size: calc((30 / 480) * 100vw);
+        letter-spacing: calc((2 / 480) * 100vw);
+    }
+
+    .venue .venue-address {
+        font-size: calc((10 / 480) * 100vw);
+        letter-spacing: calc((0.5 / 480) * 100vw);
+    }
+    
+    .venue .btn-map {
+        font-size: calc((14 / 480) * 100vw);
+    }
+    
+    .venue .event-date {
+        font-size: calc((48 / 480) * 100vw);
+        letter-spacing: calc((1 / 480) * 100vw);
+    }
+}
+
+/* Timeline Section */
+.timeline {
+    background-image: url('../images/g730.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    padding: 0px 5%;
+}
+
+.timeline h2 {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 10%;
+}
+
+.timeline .timeline-items {
+    position: relative;
+    padding: 0 5%;
+    width: 100%;
+    aspect-ratio: 480 / 400;
+}
+
+.timeline .timeline-items .timeline-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+}
+
+.timeline-items .timeline-item:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.timeline-items .timeline-item:nth-child(3) {
+    left: 15%;
+    top: 30%;
+}
+
+.timeline-items .timeline-item:nth-child(5) {
+    left: 5%;
+    top: 60%;
+}
+
+.timeline-items .timeline-item:nth-child(2) {
+    right: 8%;
+    top: 12%;
+}
+
+.timeline-items .timeline-item:nth-child(4) {
+    right: -5%;
+    top: 40%;
+}
+
+.timeline-items .timeline-item:nth-child(6) {
+    right: 8%;
+    top: 70%;
+}
+
+
+.timeline .timeline-items .timeline-item div {
+    margin: 0 5%;
+}
+
+.timeline .timeline-items .timeline-item .time-icon {
+    width: 50px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .timeline-items .timeline-item .time-icon img {
+    width: 100%;
+}
+
+.time-text {
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time-text p {
+    line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+    .timeline h2 {
+        font-size: calc((50 / 480) * 100vw);
+        letter-spacing: calc((2 / 480) * 100vw);
+    }
+
+    .timeline .timeline-items .timeline-item .time-icon {
+        width: calc((50 / 480) * 100vw);
+    }
+
+    .time-text {
+        font-size: calc((15 / 480) * 100vw);
+    }
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    padding: 5% 2%;
+}
+
+.photo-gallery .text-title {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    padding-bottom: 10px;
+}
+
+.photo-gallery .gallery-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.photo-gallery .gallery-container .img-box img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .photo-gallery .text-title {
+        font-size: calc((11 / 480) * 100vw);
+        letter-spacing: calc((1.2 / 480) * 100vw);
+    }
+}
+
+/* Quote Section */
+.quote {
+    text-align: right;
+    padding: 0 2%;
+}
+
+.quote p {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    line-height: 1;
+    margin: 1% 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+    .quote p {
+        font-size: calc((11 / 480) * 100vw);
+        letter-spacing: calc((1.4 / 480) * 100vw);
+    }
+}
+
+/* RSVP Section */
+.rsvp {
+    background-image: url('../images/end-03.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2%;
+}
+
+.rsvp form {
+    padding: 0 8%;
+}
+
+.rsvp .img-style {
+    width: 30%;
+}
+
+.rsvp .img-style img {
+    width: 100%;
+}
+
+.rsvp .rsvp-text {
+    font-family: "SVN-GothamLight", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.rsvp .rsvp-text strong {
+    font-family: "SVN-GothamBold", sans-serif;
+}
+
+.rsvp-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.rsvp-buttons input[type="radio"] {
+    display: none;
+}
+
+.rsvp-buttons label {
+    font-family: "SVN-GothamLight", sans-serif;
+    padding: 2% 7% 3%;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.rsvp-buttons label:hover {
+    background-color: #333;
+    color: #e8e3db;
+}
+
+.rsvp-buttons input[type="radio"]:checked + label {
+    background-color: #333;
+    color: #e8e3db;
+}
+
+.message-section {
+    margin: 3% 0;
+}
+
+.message-section textarea {
+    width: 100%;
+    height: 100px;
+    padding: 2%;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 4%;
+    border-radius: 15px;
+    resize: none;
+    font-family: "SVN-GothamLight", sans-serif;
+}
+
+.message-section input {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    border-radius: 15px;
+    font-family: "SVN-GothamLight", sans-serif;
+}
+
+.btn-send {
+    padding: 2% 5%;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #e8e3db;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.end-text {
+    padding: 5%;
+}
+
+.final-note {
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.6;
+    text-align: left;
+}
+
+::placeholder {
+    color: #444444;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .rsvp .rsvp-text {
+        font-size: calc((10 / 480) * 100vw);
+    }
+    .rsvp-buttons label {
+        font-size: calc((11 / 480) * 100vw);
+    }
+
+    .message-section textarea, 
+    .message-section input  {
+        font-size: calc((12 / 480) * 100vw);
+    }
+    
+    .btn-send {
+        font-size: calc((11 / 480) * 100vw);
+        letter-spacing: calc((1 / 480) * 100vw);
+    }
+}
+
+/* music */
+.player {
+    position: fixed;
+    top: 10px;
+    right: 2%;
+    max-width: 45px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.player img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .player {
+        max-width: calc((45 / 480) * 100vw);
+        min-width: 32px;
+    }
+}
