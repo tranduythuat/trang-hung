@@ -427,18 +427,18 @@ header {
 }
 
 .timeline-items .timeline-item:nth-child(2) {
-    right: 8%;
+    right: 5%;
     top: 12%;
 }
 
 .timeline-items .timeline-item:nth-child(4) {
-    right: -5%;
+    right: -8%;
     top: 46%;
 }
 
 .timeline-items .timeline-item:nth-child(6) {
     right: 8%;
-    top: 70%;
+    top: 75%;
 }
 
 
@@ -500,13 +500,20 @@ header {
 
 .photo-gallery .gallery-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2%;
 }
 
+/* .photo-gallery .gallery-container .img-box {
+    margin-top: 1%;
+    width: 225px;
+    aspect-ratio: 225 / 350;
+} */
+
 .photo-gallery .gallery-container .img-box img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 480px) {
